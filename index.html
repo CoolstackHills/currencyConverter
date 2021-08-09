@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="currency-row-outer">
+        <div class="currency-converter">
+            <h1>Currency Converter</h1>
+
+            <div class="field grid-50-50">
+                <div class="column col-left">
+                    <input type="number" class="form-input" id="number" placeholder="Enter value">
+                </div>
+                <div class="column col-right">
+                    <div class="select">
+                        <select name="currency" class="currency" onchange="updatevalue()"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field grid-50-50">
+                <div class="column col-left">
+                    <input type="text" class="form-input" id="output" placeholder="00000.00" disabled>
+                </div>
+                <div class="column col-right">
+                    <div class="select">
+                        <select name="currency" class="currency" onchange="updatevalue()"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <button onclick="updatevalue()" class="cnbtn">Convert</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
